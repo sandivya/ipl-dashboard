@@ -42,4 +42,9 @@ public class TeamController {
         return this.matchRepository.getTeamMatchesByYear(teamName, startDate, endDate);
     }
 
+    @GetMapping("/team")
+    public Iterable<Team> fetchAllTeam() {
+        return this.teamRepository.findAll();
+    }
+
 }

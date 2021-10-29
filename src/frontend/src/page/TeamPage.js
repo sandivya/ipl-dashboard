@@ -5,6 +5,7 @@ import { MatchDetailCard } from '../components/MatchDetailCard';
 import { MatchSmallCard } from '../components/MatchSmallCard';
 
 import './TeamPage.scss';
+import { HomePageRedirect } from '../components/HomePageRedirect';
 
 export const TeamPage = () => {
 
@@ -26,7 +27,10 @@ export const TeamPage = () => {
     }
 
     return (
-    <div className="TeamPage">
+        <div>
+            <HomePageRedirect/>
+        <div className="TeamPage">
+        
         <div className="team-name-section"><h1 className="team-name">{team.teamName}</h1></div>
         <div className="win-loss-section">
         <PieChart
@@ -52,5 +56,7 @@ export const TeamPage = () => {
         </div>
 
     </div>
+        </div>
+
     );
 }

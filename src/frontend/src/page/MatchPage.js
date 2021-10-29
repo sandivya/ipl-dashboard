@@ -1,5 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import { useParams } from 'react-router';
+import { HomePageRedirect } from '../components/HomePageRedirect';
 import { MatchDetailCard } from '../components/MatchDetailCard';
 import { YearSelector } from '../components/YearSelector';
 
@@ -31,7 +32,10 @@ export const MatchPage = () => {
     }
 
     return (
-    <div className="match-page">
+        <div>
+
+        <HomePageRedirect/>
+        <div className="match-page">
 
         <div className="years">
             <YearSelector teamName={teamName}/>
@@ -45,5 +49,7 @@ export const MatchPage = () => {
         </div>
         
     </div>
+        </div>
+
     );
 }
