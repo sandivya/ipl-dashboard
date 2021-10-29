@@ -1,0 +1,16 @@
+.match-page {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+
+  .year {
+    justify-self: end;
+  }
+
+  .team-year {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
