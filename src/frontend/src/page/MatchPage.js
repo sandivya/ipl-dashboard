@@ -13,7 +13,7 @@ export const MatchPage = () => {
 
     useEffect(() => {
         const fetchMatchesByYear = async () => {
-            const response = await fetch(`http://localhost:8080/team/${teamName}/matches?year=${year}`);
+            const response = await fetch(`${process.env.REACT_APP_ROOT_API_URL}/team/${teamName}/matches?year=${year}`);
             const data = await response.json();
             setMatches(data);
         }
@@ -24,8 +24,9 @@ export const MatchPage = () => {
     if(!matches.length){
         return (
             <div>
+                <HomePageRedirect/>
                 <h1>Data Not Found. Maybe try choosing another year.</h1>
-                <YearSelector teamName={teamName}/>
+                <div align="center"><YearSelector teamName={teamName}/></div>
             </div>
 
         );
