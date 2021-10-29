@@ -10,7 +10,6 @@ export const YearSelector = ({teamName}) => {
     var year = [];
 
     for(var i=START_YEAR; i<=END_YEAR; i++){
-        console.log(i);
         year.push(i);
     }
 

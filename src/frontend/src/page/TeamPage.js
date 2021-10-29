@@ -9,7 +9,7 @@ import { HomePageRedirect } from '../components/HomePageRedirect';
 
 export const TeamPage = () => {
 
-    const [team, setTeam] = useState({teamName: "", matches: [], totalWins: 0, totalMatches: 0});
+    const [team, setTeam] = useState({matches: []});
     const {teamName} = useParams();
 
     useEffect(() => {
